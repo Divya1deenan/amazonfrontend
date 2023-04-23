@@ -1,0 +1,62 @@
+nav{
+
+   
+    background-color: #4070f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo{
+
+   /* padding: 10px; */
+
+}
+.header-text{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 420px;
+    padding: 8px;
+    outline: none;
+    margin: 0px 15px;
+    color: #4070f4;
+    border-radius: 2px;
+    box-shadow: -7px -7px -7px rgba(0,0,0,0.1) 7px 7px 7px rgba(0,0,0,0.1);
+}
+.header-text input{
+
+    width: 380px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.527);
+  
+  
+}
+.header-text i{
+
+   
+}
+.login-btn{
+
+
+    background-color: #fff;
+    padding: 7px 30px;
+    color: #4070f4;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight:600;
+    border-radius: 3px; 
+}
+.nav-link{
+
+    margin: 0px 24px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-weight:600;
+    
+}

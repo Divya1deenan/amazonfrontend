@@ -1,0 +1,57 @@
+.Slider-slides {
+
+     width: 1000px;
+    height: 80%;
+    border-radius: 10px; 
+    background-position: center;
+    background-size: cover;
+ 
+}
+
+.silder {
+
+    /* height: 100%; */
+    position: relative;
+    margin-top: 50px;
+    /* width: 900px; */
+
+
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 32px;
+    font-size: 55px;
+    color: black;
+    padding: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 32px;
+    font-size: 55px;
+    color: black;
+    z-index: 1;
+    cursor: pointer;
+}
+.dot-desing{
+
+    display: flex;
+    justify-content: center;
+}
+.dot{
+
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 60px;
+}
+.discount{
+
+    margin-top: 30px;
+    background-color: grey;
+}

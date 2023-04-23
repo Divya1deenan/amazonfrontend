@@ -1,39 +1,39 @@
-import { useState } from "react";
-import Delevery from "./Delevery/Delevery";
-import DiningOut from "./DiningOut/DiningOut";
-import Footer from "./footer/footer";
-import Header from "./header/header";
-import Taboptions from "./taboptions/taboptions";
+import React from 'react'
+import Dashboard from '../Dashboard/Dashboard'
 
-// import logo from '../images/veganlogo.jpg'
+import "./Home.css"
 
-function Home() {
+import Header from '../Header/Header'
+import Slider from '../Slider/Slider'
+import Footer from '../Footer/Footer'
+import Mobile from '../mobile/mobile'
 
-    const [activeTab, setActiveTab] = useState("Delevery")
+const Home = () => {
 
-    return (
+  
+  const slides = [
 
-        <div>
-            <Header/>
-            <Taboptions activeTab={activeTab} setActiveTab={setActiveTab} />
-            {getCorrectionScreen(activeTab)}
-            <Footer/>
-        </div>
+    
+    { url: "http://localhost:3000/dashboard-1.JPG", title: "url1" },
+    { url: "http://localhost:3000/dashboard-2.JPG", title: "url1" },
+    { url: "http://localhost:3000/dashboard-3.JPG", title: "url2" },
+    { url: "http://localhost:3000/dashboard-1.JPG", title: "url3" },
 
-    );
-};
-const getCorrectionScreen = (tab) => {
-    switch (tab) {
-
-        case "Delevery":
-            return <Delevery/>;
-        case "DiningOut":
-            return <DiningOut/>;
-        default: 
-        <Delevery/>
+  ]
 
 
-    }
+  return (
+    <>
+      <Header />
+      <Dashboard />
+      <div className='main-slider'>
+        <Slider slides={slides} />
+      </div>
+      <Mobile/>
+      {/* <Footer/> */}
+    </>
 
-};
+  )
+}
+
 export default Home
