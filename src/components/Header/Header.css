@@ -1,7 +1,8 @@
 nav{
 
    
-    background-color: #4070f4;
+    background-color: rgb(35, 47, 62);
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +22,8 @@ nav{
     padding: 8px;
     outline: none;
     margin: 0px 15px;
-    color: #4070f4;
+    /* color:  #FF1493; */
+    color:#CE297E;
     border-radius: 2px;
     box-shadow: -7px -7px -7px rgba(0,0,0,0.1) 7px 7px 7px rgba(0,0,0,0.1);
 }
@@ -44,7 +46,7 @@ nav{
 
     background-color: #fff;
     padding: 7px 30px;
-    color: #4070f4;
+    color: #CE297E;;
     outline: none;
     border: none;
     font-size: 15px;

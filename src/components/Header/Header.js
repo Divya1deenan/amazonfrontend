@@ -6,7 +6,7 @@ const Header = () => {
         <>
             <nav>
                 <div className='logo'>
-                    <img src="https://globalprimenews.com/wp-content/uploads/2022/08/IMG_20220801_205340-777x437.png"  width="60px"alt="logo"/>
+                    <img src="https://th.bing.com/th/id/OIP.D-TfjSoY-c3ccnccBUQqfwHaHd?pid=ImgDet&rs=1"  width="60px"alt="logo"/>
                     
                     </div> 
                

@@ -1,0 +1,64 @@
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    position: absolute;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.carousel>div {
+    flex: 0 0 auto;
+    margin-right: 10px;
+
+    /* position: relative; */
+}
+
+.carousel>p {
+
+    text-align: center;
+
+    /* width: 250px;
+    height: 85px; */
+
+}
+
+.carousel>div:last-child {
+    margin-right: 0;
+    /* position: relative; */
+}
+
+.next-button {
+    position: absolute;
+    /* top: 90%; */
+    display: block;
+    margin: 0 auto;
+    transform: translate(0, -50%);
+    right: 32px;
+    font-size: 55px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 40px;
+    color: black;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+.prev-button {
+    position: absolute;
+    /* top: 50%; */
+    transform: translate(0, -50%);
+    left: 32px;
+    font-size: 55px;
+    color: black;
+    padding: 20px;
+    font-size: 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1;
+    cursor: pointer;
+}

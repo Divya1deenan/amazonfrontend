@@ -1,0 +1,20 @@
+
+.flex-wrap{
+
+background-color: rgb(227, 214, 240);
+}
+
+.add-to-cart{
+margin-top: 10px;
+background-color: #FF9900;
+padding: 8px;
+border-radius: 5px;
+
+}
+.buy-now{
+    background-color: #8b5605;
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 2px;
+
+}

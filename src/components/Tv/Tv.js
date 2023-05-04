@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import "./mobile.css"
+import "./Tv.css"
 import axios from 'axios';
-import image0 from "../image/mobile.JPG"
+import image0 from "../image/Tv.jpg"
 import { useHistory } from 'react-router-dom';
 
-const Mobile = () => {
+const Tvpro = () => {
   const [data, setData] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(5);
@@ -31,16 +31,16 @@ const Mobile = () => {
     }
   };
 
-  let mobile = data.filter(
+  let Tv = data.filter(
     (ele) =>
       ele.category &&
       ele.category.includes(
-        'Electronics|Mobiles&Accessories|Smartphones&BasicMobiles|Smartphones'
+        'Electronics|HomeTheater,TV&Video|Televisions|SmartTelevisions'
       )
   );
 
   let viewall= ()=>{
-    history.push('/ListPage?id=Electronics|Mobiles&Accessories|Smartphones&BasicMobiles|Smartphones');
+    history.push('/ListPage?id=Electronics|HomeTheater,TV&Video|Televisions|SmartTelevisions');
   }
 
   return (
@@ -48,7 +48,7 @@ const Mobile = () => {
     <div className='flex'>
     <div className='main-div'>
       <div className='carousel'>
-        {mobile.slice(startIndex, endIndex).map((ele) => {
+        {Tv.slice(startIndex, endIndex).map((ele) => {
           return (
             <div className='mobiles-product'>
               <img src={ele.img_link} alt={ele.product_name} />
@@ -84,4 +84,4 @@ const Mobile = () => {
   );
 };
 
-export default Mobile;
+export default Tvpro;

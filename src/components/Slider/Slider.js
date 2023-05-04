@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import { useState } from 'react'
-import discount from "../image/discount.JPG"
+// import discount from "../image/discount.JPG"
 import "./Slider.css"
 
 const Slider = ({ slides }) => {
@@ -11,16 +11,20 @@ const Slider = ({ slides }) => {
         height: "100%",
         position: "relative",
         marginTop: "40px",
-        backgroundColor:"gray"
+        objectFit: "cover",
+        backgroundColor: "gray"
 
     };
     const sliderSlides = {
 
-
-        width: "100%",
+        position: "relative",
+        // height: "100%",
+        // width: "100%",
+        backgroundRepeat: "no-repeat",
         height: "100%",
         // borderRadius: "10px",
         backgroundPosition: "center",
+
         backgroundSize: "cover",
         backgroundImage: `url(${slides[currentIndex].url})`,
     };
@@ -59,21 +63,21 @@ const Slider = ({ slides }) => {
 
     return (
         <div style={silders}>
-            <div className='left-arrow' onClick={goToPrevious}><i class="fa-solid fa-caret-left"></i></div>
-            <div className='right-arrow' onClick={goToNext}><i class="fa-solid fa-caret-right"></i></div>
+            <div className='left-arrow' onClick={goToPrevious}>❰</div>
+            <div className='right-arrow' onClick={goToNext}>❱</div>
             <div style={sliderSlides}></div>
             <div className='dot-desing'>
                 {slides.map((slide, slideIndex) => (
 
-                    <div key={slideIndex}  onClick={() => goToSlide(slideIndex)}>
-                        
+                    <div key={slideIndex} onClick={() => goToSlide(slideIndex)}>
+
                     </div>
 
                 ))}
             </div>
-           <div>
+            <div>
 
-            <img src={discount} alt="dis" className='discount'/>
+                {/* <img src={discount} alt="dis" className='discount'/> */}
             </div>
         </div>
     )

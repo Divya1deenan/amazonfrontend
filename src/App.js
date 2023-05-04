@@ -14,6 +14,8 @@ import {
 import Registartion from './components/Registration/Registartion';
 
 import Home from './components/Home/Home';
+import ListPage from './ListPage/ListPage';
+import SinglePage from './components/SinglePage/SinglePage';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
       <Route exact path='/'><Registartion/></Route>
       <Route exact path='/Login'><Login/></Route>
       <Route exact path='/Home'><Home/></Route>
+      <Route exact path='/ListPage'><ListPage/></Route>
+      <Route exact path='/SinglePage'><SinglePage/></Route>
      
       </Switch>
     </BrowserRouter>

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import "./mobile.css"
+import "./Watch.css"
 import axios from 'axios';
-import image0 from "../image/mobile.JPG"
+import image1 from "../image/watch.jpg"
+
 import { useHistory } from 'react-router-dom';
 
-const Mobile = () => {
+const Watch = () => {
   const [data, setData] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(5);
@@ -31,17 +32,17 @@ const Mobile = () => {
     }
   };
 
+  let viewall= ()=>{
+    history.push('/ListPage?id=Electronics|WearableTechnology|SmartWatches');
+  }
+
   let mobile = data.filter(
     (ele) =>
       ele.category &&
       ele.category.includes(
-        'Electronics|Mobiles&Accessories|Smartphones&BasicMobiles|Smartphones'
+        'Electronics|WearableTechnology|SmartWatches'
       )
   );
-
-  let viewall= ()=>{
-    history.push('/ListPage?id=Electronics|Mobiles&Accessories|Smartphones&BasicMobiles|Smartphones');
-  }
 
   return (
 
@@ -76,7 +77,7 @@ const Mobile = () => {
       </div>
     </div>
     <div className='myCard'>
-      <img src={image0} alt="mobile" width="270px" height="200px"/> 
+      <img src={image1} alt="mobile" width="270px" height="200px"/> 
        <h2>BEST OF PHONES</h2>
        <button className='view-all' onClick={viewall}>VIEW ALL</button>
     </div>
@@ -84,4 +85,5 @@ const Mobile = () => {
   );
 };
 
-export default Mobile;
+
+export default Watch;

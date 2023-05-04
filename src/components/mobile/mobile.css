@@ -1,0 +1,97 @@
+.flex {
+    display: flex;
+}
+
+.flex-wrap{
+    flex-flow: wrap;
+}
+
+.main-div {
+    width: 75%;
+    height: 311px;
+  position: relative;
+    background-color: #Fff;
+
+}
+
+
+.carousel {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+    background-color: #Fff;
+
+
+}
+
+
+
+.mobiles-product {
+
+    height: 370px;
+    padding: 20px;
+    background: white;
+    margin: 10px
+}
+
+.mobiles-product>img {
+
+    width: 225px;
+    height: 250px;
+    overflow: auto;
+}
+
+.mobiles-product>p {
+
+    text-align: center;
+    background-color: #Fff;
+}
+
+
+
+
+.next-button {
+    position: absolute;
+    transform: translate(0, -50%);
+    right: 32px;
+    font-size: 55px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 40px;
+    color: black;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+.prev-button {
+    position: absolute;
+    transform: translate(0, -50%);
+    left: 32px;
+    font-size: 55px;
+    color: black;
+    padding: 20px;
+    font-size: 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+.view-all{
+
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color:rgb(35,47,62);
+    cursor: pointer;
+}
+
+.myCard{
+    text-align: center;
+    margin-top: 55px;
+    cursor: pointer;
+}

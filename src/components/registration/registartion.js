@@ -12,8 +12,7 @@ const Registartion = () => {
         email: ""
     })
 
-    const [errors, setErrors] = useState({});
-
+    
     const handleInputChange = (e) => {
 
         let copy = { ...formValues }
@@ -24,8 +23,7 @@ const Registartion = () => {
 
     const registration = (e) => {
         e.preventDefault();
-        const validationErrors = validateForm();
-        if (Object.keys(validationErrors).length === 0) {
+        
             axios.post("http://localhost:4000/user/Registartion", formValues)
                 .then((res) => {
                     // console.log(res.data)
@@ -37,41 +35,8 @@ const Registartion = () => {
                 .catch((err) => {
                     console.log(err)
                 })
-        } else {
-            setErrors(validationErrors);
-        }    const validateForm = () => {
-
-        let errors = {};
-        if (!formValues.name) {
-            errors.name = "Name is required";
-        }
-        if (!formValues.email) {
-            errors.email = "Email is required";
-        } else if (!isValidEmail(formValues.email)) {
-            errors.email = "Please enter a valid email";
-        }
-        if (!formValues.password) {
-            errors.password = "password number is required";
-        } else if (!isValidpassword(formValues.password)) {
-            errors.password = "Password must contain at least 8 characters, including at least 1 letter and 1 number";
-        
-        }
-        return errors;
-    };
-    const isValidEmail = (email) => {
-       
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-      };
+        } 
     
-      const isValidpassword= (password) => {
-      
-        const passwordRegex =/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-        return passwordRegex.test(password);
-      };
-    
-
-    }
 
 return (
     <div className="main">
@@ -86,17 +51,17 @@ return (
                         <div className="input-field">
                             <input type="text" placeholder="Enter you Name" onChange={handleInputChange} name="name" value={formValues.name} />
                             <i className="fa-solid fa-user"></i>
-                            {errors.name && <span className="error">{errors.name}</span>}
+                            
                         </div>
                         <div className="input-field">
                             <input type="password" placeholder="Enter you Password" required onChange={handleInputChange} name="password" value={formValues.password} />
                             <i class="fa-solid fa-lock icon"></i>
-                            {errors.password && <span className="error">{errors.password}</span>}
+                            
                         </div>
                         <div className="input-field">
                             <input type="email" placeholder="Enter you Email" required onChange={handleInputChange} name="email" value={formValues.email} />
                             <i class="fa-solid fa-envelope icon"></i>
-                            {errors.email && <span className="error">{errors.email}</span>}
+                           
                         </div>
                         <div className="checkbox-text">
                             <div className="checkbox-content">
